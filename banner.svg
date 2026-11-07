@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0b0f1a"/>
+      <stop offset="55%" stop-color="#111a33"/>
+      <stop offset="100%" stop-color="#1b1140"/>
+    </linearGradient>
+    <linearGradient id="name" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#f472b6" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#f472b6" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+    <style>
+      .mono { font-family: 'Fira Code', 'Consolas', 'Courier New', monospace; }
+      .sans { font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; }
+      @keyframes float1 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(40px,18px); } }
+      @keyframes float2 { 0%,100% { transform: translate(0,0); } 50% { transform: translate(-45px,-14px); } }
+      @keyframes blink { 0%,49% { opacity: 1; } 50%,100% { opacity: 0; } }
+      @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+      .g1 { animation: float1 7s ease-in-out infinite; }
+      .g2 { animation: float2 9s ease-in-out infinite; }
+      .cursor { animation: blink 1s steps(1) infinite; }
+      .t1 { animation: rise 0.9s ease-out 0.1s both; }
+      .t2 { animation: rise 0.9s ease-out 0.5s both; }
+      .t3 { animation: rise 0.9s ease-out 0.9s both; }
+      .t4 { animation: rise 0.9s ease-out 1.3s both; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="320" rx="18" fill="url(#bg)"/>
+  <rect width="1200" height="320" rx="18" fill="url(#grid)"/>
+
+  <circle class="g1" cx="220" cy="90" r="190" fill="url(#glow1)"/>
+  <circle class="g2" cx="980" cy="240" r="210" fill="url(#glow2)"/>
+
+  <!-- window dots -->
+  <circle cx="40" cy="38" r="6" fill="#ff5f56"/>
+  <circle cx="62" cy="38" r="6" fill="#ffbd2e"/>
+  <circle cx="84" cy="38" r="6" fill="#27c93f"/>
+  <text x="112" y="43" class="mono" font-size="13" fill="#8b93a7">~/muhammad-aliyan  —  portfolio.jsx</text>
+
+  <!-- code decoration -->
+  <text x="930" y="110" class="mono" font-size="64" fill="#ffffff" fill-opacity="0.06">&lt;/&gt;</text>
+  <text x="985" y="200" class="mono" font-size="46" fill="#ffffff" fill-opacity="0.06">{ }</text>
+
+  <text x="70" y="125" class="mono t1" font-size="18" fill="#38bdf8">&gt; hello, world. i'm</text>
+
+  <text x="68" y="195" class="sans t2" font-size="76" font-weight="800" fill="url(#name)" letter-spacing="1">MUHAMMAD ALIYAN</text>
+
+  <text x="70" y="240" class="mono t3" font-size="22" fill="#e2e8f0">Full-Stack Developer <tspan fill="#a78bfa">•</tspan> MERN <tspan fill="#a78bfa">•</tspan> AI Automation</text>
+
+  <text x="70" y="277" class="mono t4" font-size="15" fill="#8b93a7">building real, live products from Bahawalnagar, Pakistan<tspan class="cursor" fill="#38bdf8"> ▌</tspan></text>
+</svg>
